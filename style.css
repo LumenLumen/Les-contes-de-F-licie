@@ -61,3 +61,47 @@ footer{
 .image-tooltip:hover .tooltip-text {
     visibility: visible;
 }
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.galerie .image-tooltip {
+    flex: 0 0 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+    box-sizing: border-box;
+}
+
+.galerie .image-tooltip img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.galerie .image-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.galerie .tooltip-text {
+    position: absolute;
+    left: 50%;
+    top: 0.75rem;
+    transform: translateX(-50%);
+    visibility: hidden;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    z-index: 10;
+}
+
+.galerie .image-tooltip:hover .tooltip-text {
+    visibility: visible;
+}

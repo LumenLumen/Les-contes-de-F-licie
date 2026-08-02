@@ -1,9 +1,9 @@
 :root{
     --pink-color: #fda8b7;
-    --red-color: #f95b89;
+    --red-color: #e63f6e;
 }
 body {
-    background-color: rgb(164, 215, 212);
+    background-color: rgb(149, 206, 202);
 }
 
 
@@ -50,6 +50,9 @@ body {
     border:2px dotted var(--red-color);
     border-radius:10px;
     padding:15px;
+    max-width:700px;
+    margin:auto;
+    text-align:justify;
 }
 
 ul {
@@ -58,4 +61,10 @@ ul {
 
 ul li {
     margin-bottom: 0.75rem;
+}
+
+p, ul {
+    max-width:700px;
+    margin:auto;
+    text-align:justify;
 }
