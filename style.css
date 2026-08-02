@@ -1,4 +1,63 @@
+:root{
+    --bg-color: rgb(219, 209, 201);
+    --accent-color: rgb(134, 10, 43);
+    --accent-color-darker: rgb(93, 7, 30);
+}
+
 * {
-    min-width: 600px;
-    background-color: rgb(219, 209, 201);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 20px;
+    background-color: var(--bg-color);
+    line-height: 1.2;
+}
+
+p {
+    text-align: justify;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    background-color: var(--accent-color);
+    color: rgb(219, 209, 201);
+    border: 2px solid var(--accent-color-darker);
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 0.6em;
+    width: 100%;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    z-index: 10;
+}
+
+.tooltip-text a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.image-tooltip:hover .tooltip-text {
+    visibility: visible;
 }
