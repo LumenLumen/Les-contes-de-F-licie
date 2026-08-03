@@ -62,6 +62,8 @@ footer{
     visibility: visible;
 }
 
+
+
 .galerie {
     display: flex;
     flex-wrap: wrap;
@@ -104,4 +106,81 @@ footer{
 
 .galerie .image-tooltip:hover .tooltip-text {
     visibility: visible;
+}
+
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.flex-row__media {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.flex-row__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flex-row__text {
+    flex: 1 1 0;
+}
+
+@media (max-width: 768px) {
+    .flex-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flex-row__media,
+    .flex-row__text {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.flex-row .image-tooltip {
+    box-sizing: border-box;
+}
+
+.flex-row .image-tooltip img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flex-row .image-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.flex-row .tooltip-text {
+    position: absolute;
+    left: 50%;
+    top: 0.75rem;
+    transform: translateX(-50%);
+    visibility: hidden;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    z-index: 10;
+}
+
+.flex-row .image-tooltip:hover .tooltip-text {
+    visibility: visible;
+}
+
+.sticky {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
 }

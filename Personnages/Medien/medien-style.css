@@ -1,3 +1,20 @@
+:root{
+    --red-color: #be1a25;
+    --orange-color: #ebb956;
+}
+
 body {
-    background-color: rgb(228, 202, 141);
+    background-color: #f3ca96;
+}
+
+.bouton {
+    background-color: var(--orange-color);
+    color: #000;
+    border: 2px solid var(--red-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border-radius:10px;
 }

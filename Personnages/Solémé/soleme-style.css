@@ -44,6 +44,7 @@ body {
     margin-bottom: 1rem;
     color: var(--red-color);
     font-weight: bold;
+    letter-spacing: 0.2rem;
 }
 
 .encadre {
