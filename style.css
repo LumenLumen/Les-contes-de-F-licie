@@ -8,6 +8,7 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+/*General*/
 body {
     margin: 20px;
     background-color: var(--bg-color);
@@ -23,13 +24,18 @@ img {
     height: auto;
 }
 
-.button {
-    background-color: var(--accent-color);
-    color: rgb(219, 209, 201);
-    border: 2px solid var(--accent-color-darker);
-    padding: 10px 20px;
-    cursor: pointer;
-    text-decoration: none;
+ul {
+    list-style-type: disc;
+}
+
+ul li {
+    margin-bottom: 0.75rem;
+}
+
+p, ul {
+    max-width:700px;
+    margin:auto;
+    text-align:justify;
 }
 
 footer{
@@ -39,6 +45,54 @@ footer{
     width: 100%;
 }
 
+/*Menu*/
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+
+/*Bouton choix langue + onglets*/
+.centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem auto;
+    list-style-type:none;
+}
+
+.tab-pane {
+    display: none;
+}
+.tab-pane.active {
+    display: block;
+}
+
+
+
+/*Voué à disparaitre*/
+.button {
+    background-color: var(--accent-color);
+    color: rgb(219, 209, 201);
+    border: 2px solid var(--accent-color-darker);
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+/*Tooltip*/
 .tooltip-text {
     visibility: hidden;
     position: absolute;
@@ -64,6 +118,7 @@ footer{
 
 
 
+/*Galerie d'images*/
 .galerie {
     display: flex;
     flex-wrap: wrap;
@@ -109,6 +164,8 @@ footer{
 }
 
 
+
+/*Flex row*/
 .flex-row {
     display: flex;
     align-items: center;
@@ -178,9 +235,50 @@ footer{
     visibility: visible;
 }
 
+.flex-row p {
+    max-width: 100% !important;
+}
+
+
+
+/*Bouton de retour*/
 .sticky {
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 1000;
+}
+
+
+
+/*Encadré*/
+.size {
+    text-align: center;
+    padding: 10px;
+}
+
+.resume {
+    font-size: 18px;
+    padding: 10px;
+}
+
+
+/*Liste de personnages*/
+.galerie-perso {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.perso {
+    text-align: center;
+    margin: 20px 0;
+    max-width: 200px;
+    border: 1px dotted var(--accent-color);
+}
+
+.perso img {
+    max-height: 200px;
 }
