@@ -15,6 +15,16 @@ body {
     line-height: 1.2;
 }
 
+h1, h2{
+    text-align: center;
+    color: var(--accent-color-darker)
+}
+
+h3 {
+    text-align: center;
+    color: var(--accent-color)
+}
+
 p {
     text-align: justify;
 }
@@ -400,10 +410,18 @@ nav li {
 .perso {
     text-align: center;
     margin: 20px 0;
-    max-width: 200px;
-    border: 1px dotted var(--accent-color);
+    width: 220px;
+    height: 220px;
+    border: 1px dotted var(--accent-color); 
+    background-position: center; 
+    background-size: cover;   
+    text-decoration: none;
 }
 
-.perso img {
-    max-height: 200px;
+.perso span{
+    background-color: var(--bg-color);
+    position: relative;
+    top: 200px;
+    padding: 5px;
+    color: var(--accent-color);
 }
