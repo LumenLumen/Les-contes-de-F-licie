@@ -70,121 +70,46 @@ nav li {
 
 
 /*Spoiler*/
-.spoiler {
-    border: 2px solid var(--accent-color);
-    border-radius: 10px;
-    padding: 0.75rem 1rem;
-    margin: 1.5rem 0;
-    background: rgba(255,255,255,0.3);
-}
-
-.spoiler summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--accent-color);
-}
-
-.spoiler-content {
-    margin-top: 0.75rem;
-}
-
-.spoiler img {
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-}
-
-.spoiler-image {
+.spoiler-box {
     position: relative;
-    display: inline-block;
-    max-width: 100%;
     overflow: hidden;
     border-radius: 8px;
     margin: 1rem 0;
 }
 
-.spoiler-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    filter: blur(8px) brightness(0.35);
-    transition: filter 0.2s ease;
+.spoiler-toggle {
+    display: none;
 }
 
 .spoiler-overlay {
     position: absolute;
     inset: 0;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1rem;
     background: rgba(0, 0, 0, 0.75);
-    color: white;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
-    z-index: 2;
+    padding: 1rem;
+    transition: opacity 0.2s ease;
 }
 
-.spoiler-toggle {
-    display: none;
-}
-
-.spoiler-toggle:checked + .spoiler-overlay {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.spoiler-toggle:checked ~ img {
-    filter: none;
-}
-
-.spoiler-image .image-tooltip img {
-    display: block;
-    width: 100%;
-    height: auto;
+/* Le flou s'applique à tout conteneur de contenu */
+.spoiler-content {
     filter: blur(8px) brightness(0.35);
     transition: filter 0.2s ease;
 }
 
-.spoiler-toggle:checked ~ .image-tooltip img {
-    filter: none;
+.spoiler-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-.spoiler-block {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    padding: 1rem;
-    background: rgba(0,0,0,0);
-}
-
-.spoiler-content {
-    position: relative;
-    z-index: 1;
-    filter: blur(4px);
-}
-
-.spoiler-toggle {
-    display: none;
-}
-
-.spoiler-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: rgba(0,0,0,0.75);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2;
-}
-
+/* Dévoilement au clic */
 .spoiler-toggle:checked + .spoiler-overlay {
     opacity: 0;
     pointer-events: none;
@@ -260,6 +185,16 @@ nav li {
     justify-content: center;
     gap: 1rem;
     margin: 2rem 0;
+}
+
+.galerie .spoiler-box {
+    flex: 0 0 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+    box-sizing: border-box; 
+}
+
+.galerie .spoiler-box .image-tooltip {
+    max-width: none !important;
 }
 
 .galerie .image-tooltip {
